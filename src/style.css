@@ -1,0 +1,185 @@
+:root {
+  --salmon: #ef9d71;
+  --black: #000;
+  --white: #fff;
+  --cyan: #aedee0;
+  /* cyan:#80becc alternate */
+  --darksalmon: #532521;
+  --darkcyan: #1f2f32;
+  --aquaisland: #aedee0;
+  --yellow: #f5f19c;
+}
+
+body {
+  transition: background-color ease-out 0.5s;
+}
+.viddiv {
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+*::selection {
+  background-color: var(--salmon);
+}
+
+.text::selection {
+  color: var(--white);
+}
+
+body[theme="black"] {
+  background-color: var(--black);
+}
+
+body[theme="black"] .section {
+  color: var(--white);
+}
+body[theme="yellow"] {
+  background-color: var(--yellow);
+}
+
+body[theme="yellow"] .section {
+  color: var(--black);
+}
+
+body[theme="cyan"] {
+  background-color: var(--cyan);
+}
+body[theme="cyan"] .section {
+  color: var(--black);
+}
+body[theme="salmon"] {
+  background-color: var(--salmon);
+}
+body[theme="salmon"] .section {
+  color: var(--darksalmon);
+}
+body[theme="white"] {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+body[theme="white"] .section {
+  color: var(--black);
+}
+
+.cards {
+  color: black;
+}
+
+.carousel-track {
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+.carousel-item {
+  box-sizing: border-box;
+  opacity: 1;
+  flex: 0 0 100%;
+  text-align: center;
+  min-width: 100%;
+}
+
+.headText .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.maskersText {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.maskersText i {
+  transition: transform 0.3s ease;
+}
+
+.maskersText.hover i {
+  transform: rotate(45deg);
+  opacity: 0;
+}
+
+.wave-text {
+  display: inline-block;
+  overflow: hidden;
+}
+
+.wave-text span {
+  display: inline-block;
+  transform-origin: 50% 50%;
+  transition: transform 0.3s ease;
+  opacity: 1;
+}
+
+.navbar {
+  transition: background-color ease-out 0.3s, color ease-out 0.3s;
+}
+.carousel-tracks {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: max-content; /* Ensure the track can expand */
+  will-change: transform;
+}
+
+.carousel-items {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  width: 100%; /* Ensure items take full width */
+  /* You may need to set an explicit width if not using full width */
+  display: none;
+
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carousel-items.active {
+  display: block;
+  opacity: 1;
+}
+
+.carousels {
+  overflow: hidden; /* Hide overflow to make scroll effect visible */
+  width: 100%;
+}
+
+.carousel-items .img {
+  transform: scale(0.2); /* Initial small scale */
+  transition: transform 0.5s ease;
+}
+
+.carousel-items.active .img {
+  transform: scale(1);
+}
+
+.char {
+  display: inline-block;
+}
+.act {
+  position: relative;
+}
+
+.quote:first-of-type {
+  clip-path: polygon(0% 0%, 100% 20%, 100% 100%, 0% 81%);
+}
+.quote:nth-of-type(2) {
+  clip-path: polygon(0% 49%, 100% 49%, 100% 100%, 0% 100%);
+}
+
+.quote:not(span:last-of-type) {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.arrow {
+  /* display: inline-block; */
+  transition: transform 0.5s ease;
+}
+
+.char {
+  display: inline-block;
+}
+.word {
+  white-space: nowrap;
+}
+
+.ml13 .letter {
+  display: inline-block;
+  /* line-height: 1em; */
+}
